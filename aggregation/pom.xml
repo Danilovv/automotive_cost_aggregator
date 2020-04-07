@@ -23,6 +23,7 @@
         <dependency>
             <groupId>com.vdan.automotive.parts.aggregation</groupId>
             <artifactId>app</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
 
         <dependency>

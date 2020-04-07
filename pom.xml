@@ -2,12 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-<!--    <parent>-->
-<!--        <groupId>org.springframework.boot</groupId>-->
-<!--        <artifactId>spring-boot-starter-parent</artifactId>-->
-<!--        <version>2.2.6.RELEASE</version>-->
-<!--&lt;!&ndash;        <relativePath/> &lt;!&ndash; lookup parent from repository &ndash;&gt;&ndash;&gt;-->
-<!--    </parent>-->
+
     <groupId>com.vdan.automotive.parts.aggregation</groupId>
     <artifactId>app</artifactId>
     <version>0.0.1-SNAPSHOT</version>
@@ -26,32 +21,6 @@
         <module>aggregation</module>
     </modules>
 
-<!--    <dependencyManagement>-->
-<!--        <dependencies>-->
-<!--            <dependency>-->
-<!--                <groupId>org.springframework.boot</groupId>-->
-<!--                <artifactId>spring-boot-starter</artifactId>-->
-<!--            </dependency>-->
-
-<!--&lt;!&ndash;            <dependency>&ndash;&gt;-->
-<!--&lt;!&ndash;                <groupId>org.projectlombok</groupId>&ndash;&gt;-->
-<!--&lt;!&ndash;                <artifactId>lombok</artifactId>&ndash;&gt;-->
-<!--&lt;!&ndash;                <optional>true</optional>&ndash;&gt;-->
-<!--&lt;!&ndash;            </dependency>&ndash;&gt;-->
-<!--            <dependency>-->
-<!--                <groupId>org.springframework.boot</groupId>-->
-<!--                <artifactId>spring-boot-starter-test</artifactId>-->
-<!--                <scope>test</scope>-->
-<!--                <exclusions>-->
-<!--                    <exclusion>-->
-<!--                        <groupId>org.junit.vintage</groupId>-->
-<!--                        <artifactId>junit-vintage-engine</artifactId>-->
-<!--                    </exclusion>-->
-<!--                </exclusions>-->
-<!--            </dependency>-->
-<!--        </dependencies>-->
-<!--    </dependencyManagement>-->
-
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -60,14 +29,5 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-
-<!--    <build>-->
-<!--        <plugins>-->
-<!--            <plugin>-->
-<!--                <groupId>org.springframework.boot</groupId>-->
-<!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
-<!--            </plugin>-->
-<!--        </plugins>-->
-<!--    </build>-->
 
 </project>
