@@ -1,5 +1,6 @@
 package com.vdan.automotive.parts.aggregation.aggregation;
 
+import com.vdan.automotive.parts.aggregation.aggregation.common.AnalyzerFactory;
 import lombok.RequiredArgsConstructor;
 import org.apache.spark.api.java.JavaSparkContext;
 import org.openqa.selenium.By;
@@ -7,15 +8,20 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.interactions.Actions;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @RequiredArgsConstructor
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {
+        "com.vdan.automotive.parts.aggregation.aggregation",
+        "com.vdan.automotive.parts.aggregation.analyzer.model.impl"
+})
 public class AggregationApplication implements CommandLineRunner {
 
     private final JavaSparkContext javaSparkContext;
+    private final AnalyzerFactory analyzerFactory;
 
     public static void main(String[] args) {
         SpringApplication.run(AggregationApplication.class, args);
@@ -42,6 +48,10 @@ public class AggregationApplication implements CommandLineRunner {
         final WebDriver webDriver = new ChromeDriver(chromeDriverService, chromeOptions);
 
         webDriver.get("https://yandex.ru/");
+
+        final Actions actions = new Actions(webDriver);
+//        actions
+        actions.build(); // TODO investigate
 
         final String title = webDriver.getTitle();
         final String weatherTemp = webDriver.findElement(By.className("weather__temp")).getText();

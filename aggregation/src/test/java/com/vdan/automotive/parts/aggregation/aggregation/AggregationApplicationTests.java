@@ -8,6 +8,7 @@ class AggregationApplicationTests {
 
     @Test
     void contextLoads() {
+
     }
 
 }
